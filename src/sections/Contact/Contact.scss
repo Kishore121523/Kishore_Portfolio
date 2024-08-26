@@ -1,0 +1,562 @@
+#contact {
+    background: url("../../assets/contKish3.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    min-height: auto;
+    width: 100%;
+    background: var(--backgroundColor);
+    .wrapper {
+        width: 100%;
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 0;
+            padding-bottom: 1.5rem;
+            height: auto;
+            margin: auto 3rem;
+            .contact-head-div {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2rem;
+                .contact-logo {
+                    display: none;
+                    opacity: 0;
+                }
+                .contact-top {
+                    order: 2;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    .contact-phone {
+                        opacity: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .fontAwesomeIconPhone {
+                            color: var(--peach);
+                            box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                            background: var(--backgroundColor);
+                            border-radius: 50%;
+                            padding: 1.2rem;
+                            font-size: 0.7rem;
+                        }
+                        .phone-head {
+                            font-size: 0.7rem;
+                            color: var(--peach);
+                        }
+                        .phone-content {
+                            font-size: 0.6rem;
+                        }
+                    }
+                }
+            }
+            .contact-main {
+                display: flex;
+                color: var(--halfWhite);
+                width: 100%;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-self: center;
+                align-items: center;
+                gap: 2rem;
+                margin-top: 10%;
+                .contactNameDiv1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 1rem 1.2rem;
+                    box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                    background: var(--backgroundColor);
+                    border-radius: 25px;
+                    border: 1px solid rgba(14, 14, 14, 0.18);
+                    width: 100%;
+                    animation: slideIn 2.5s forwards;
+                    .contactContent {
+                        display: flex;
+                        flex-direction: column;
+                        div {
+                            a {
+                                font-size: 0.8rem;
+                                padding-top: 3px;
+                                transition: all 300ms ease;
+                                color: var(--halfWhite);
+                                &:hover {
+                                    cursor: pointer;
+                                    color: var(--peach);
+                                }
+                            }
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        .name {
+                            color: var(--peach);
+                            font-size: 1rem;
+                            font-weight: bold;
+                            padding-bottom: 1rem;
+                        }
+                        .role {
+                            font-size: 0.8rem;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+            .contact-bottom {
+                display: flex;
+                width: 100%;
+                margin-top: 1.5rem;
+                align-items: center;
+                justify-content: space-between;
+                .contact-social-media ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1.5rem;
+                    li {
+                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                        background: var(--backgroundColor);
+                        border-radius: 5px;
+                        a {
+                            color: var(--halfWhite);
+                            transition: color 200ms ease;
+                            &:hover {
+                                color: var(--peach);
+                            }
+                            .fontAwesomeIconContact {
+                                opacity: 0;
+                                font-size: 0.8rem;
+                                padding: 0.1rem 0.5rem;
+                            }
+                        }
+                    }
+                }
+                .copyright {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 1px;
+                    color: var(--halfWhite);
+                    p {
+                        opacity: 0;
+                        font-size: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 680px) {
+    #contact {
+        background: url("/assets/contKish3.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        min-height: 100vh;
+        .wrapper {
+            .contact-content {
+                margin: auto 6rem;
+                .contact-head-div {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 2rem;
+                    .contact-top {
+                        order: 2;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 3rem;
+                        .contact-phone {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0.3rem;
+                            .fontAwesomeIconPhone {
+                                border-radius: 50%;
+                                padding: 1.2rem;
+                                font-size: 1rem;
+                            }
+                            .phone-head {
+                                font-size: 0.7rem;
+                                color: var(--peach);
+                            }
+                            .phone-content {
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+                .contact-main {
+                    display: flex;
+                    color: var(--halfWhite);
+                    width: 100%;
+                    flex-direction: column-reverse;
+                    justify-content: center;
+                    align-self: center;
+                    align-items: center;
+                    gap: 2rem;
+                    margin-top: 7%;
+                    .contact-logo {
+                        visibility: hidden;
+                        svg {
+                            position: relative;
+                            right: 0;
+                            height: 23vh;
+                            align-self: center;
+                            z-index: 0;
+                            .kLogo {
+                                fill: transparent;
+                            }
+                            .rect {
+                                fill: transparent;
+                            }
+                        }
+                    }
+                    .contactNameDiv1 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        padding: 1.5rem 1.2rem;
+                        padding-left: 0.9rem;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                        background: var(--backgroundColor);
+                        border: 1px solid rgba(14, 14, 14, 0.18);
+                        width: 20rem;
+                        animation: slideIn 2.5s forwards;
+                        .contactContent {
+                            display: flex;
+                            flex-direction: column;
+                            div {
+                                a {
+                                    font-size: 1rem;
+                                    padding-top: 3px;
+                                    transition: all 300ms ease;
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: var(--peach);
+                                    }
+                                }
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            .name {
+                                color: var(--peach);
+                                font-size: 2rem;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                .contact-bottom {
+                    display: flex;
+                    width: 100%;
+                    margin-top: 1.5rem;
+                    align-items: center;
+                    justify-content: space-between;
+                    .contact-social-media ul {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+                        li {
+                            a {
+                                color: var(--halfWhite);
+                                font-size: 1.2rem;
+                                transition: all 300ms ease;
+                                &:hover {
+                                    color: var(--peach);
+                                }
+                            }
+                        }
+                    }
+                    .copyright {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 1px;
+                        color: var(--halfWhite);
+                        p {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 920px) {
+    #contact {
+        min-height: 100vh;
+        width: 100%;
+        .wrapper {
+            width: 100%;
+            .contact-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 6rem 0;
+                padding-top: 2rem;
+                padding-bottom: 1.5rem;
+                padding-left: 0rem;
+                height: auto;
+                margin: auto 9rem;
+                .contact-head-div {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    .contact-logo {
+                        display: flex;
+                        svg {
+                            position: relative;
+                            right: 0;
+                            height: 10vh;
+                            align-self: flex-start;
+                            z-index: 0;
+                            padding-left: 2rem;
+                            .kLogo {
+                                fill: transparent;
+                            }
+                            .rect {
+                                fill: transparent;
+                            }
+                        }
+                    }
+                    .contact-top {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0rem;
+                        order: 1;
+                        .contact-phone {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0.3rem;
+                            margin-left: auto;
+                            .fontAwesomeIconPhone {
+                                border-radius: 50%;
+                                padding: 1.2rem;
+                                font-size: 1rem;
+                            }
+                            .phone-head {
+                                font-size: 0.8rem;
+                                color: var(--peach);
+                            }
+                            .phone-content {
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+                .contact-main {
+                    display: flex;
+                    color: var(--halfWhite);
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 16%;
+                    padding-bottom: 2rem;
+                    margin-left: 1.5rem;
+                    .contactNameDiv1 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        padding: 1.5rem 1.2rem;
+                        padding-left: 0.9rem;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                        background: var(--backgroundColor);
+                        border: 1px solid rgba(14, 14, 14, 0.18);
+                        width: 20rem;
+                        animation: slideIn 2.5s forwards;
+                        .contactContent {
+                            display: flex;
+                            flex-direction: column;
+                            div {
+                                a {
+                                    font-size: 1rem;
+                                    padding-top: 3px;
+                                    transition: all 300ms ease;
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: var(--peach);
+                                    }
+                                }
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            .name {
+                                color: var(--peach);
+                                font-size: 2rem;
+                                font-weight: bold;
+                            }
+                            .email-content {
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+                .contact-bottom {
+                    display: flex;
+                    width: 100%;
+                    margin-top: 9rem;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    .contact-social-media ul {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+                        li {
+                            box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                            background: var(--backgroundColor);
+                            border-radius: 5px;
+                            margin-right: 1rem;
+                            a {
+                                color: var(--halfWhite);
+                                transition: color 200ms ease;
+                                &:hover {
+                                    color: var(--peach);
+                                }
+                                .fontAwesomeIconContact {
+                                    font-size: 1rem;
+                                    padding: 0.3rem 2rem;
+                                }
+                            }
+                        }
+                    }
+                    .copyright {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 1px;
+                        color: var(--halfWhite);
+                        p {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #contact {
+        .wrapper {
+            .contact-content {
+                margin: auto 10rem;
+                .contact-head-div {
+                    .contact-logo {
+                        svg {
+                            height: 10vh;
+                        }
+                    }
+                    .contact-top {
+                        gap: 4.5rem;
+                        .contact-phone {
+                            gap: 0.4rem;
+                            margin-right: 4rem;
+                            .fontAwesomeIconPhone {
+                                padding: 1.3rem;
+                                font-size: 1.3rem;
+                            }
+                            .phone-head {
+                                font-size: 0.9rem;
+                            }
+                            .phone-content {
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+                .contact-main {
+                    margin-top: 17%;
+                    margin-left: 0;
+                    .contactNameDiv1 {
+                        padding: 1.5rem 1.2rem;
+                        padding-left: 0.9rem;
+                        margin-bottom: 1rem;
+                        width: 25rem;
+                        .contactContent {
+                            display: flex;
+                            flex-direction: column;
+                            div {
+                                a {
+                                    font-size: 1.2rem;
+                                    padding-top: 3px;
+                                    transition: all 300ms ease;
+                                    color: var(--halfWhite);
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: var(--peach);
+                                    }
+                                }
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            .name {
+                                color: var(--peach);
+                                font-size: 2rem;
+                                font-weight: bold;
+                            }
+                            .role {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                .contact-bottom {
+                    margin-top: 14%;
+                    .contact-social-media ul {
+                        gap: 3rem;
+                    }
+                    .copyright {
+                        gap: 3px;
+                        p {
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

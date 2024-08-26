@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+/* variables */
+
+:root {
+    --fontBase: "DM Sans", sans-serif;
+    --backgroundColor: #0f0f0f;
+    --level1Dark: #1e1e1e;
+    --level2Dark: #222222;
+    --level3Dark: #363636;
+    --level4Dark: #242424;
+    --level5Dark: #272727;
+    --level6Dark: #2c2c2c;
+    --level7Dark: #2d2d2d;
+    --level8Dark: #343434;
+    --level9Dark: #383838;
+    --purple: #bb86fc;
+    --peach: #f4ae95;
+    --cyan: #03dac5;
+    --error: #cf6679;
+    --halfWhite: #d6d4d4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fontBase);
+    line-height: 1.4;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body,
+html {
+    overflow-x: hidden !important;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background: var(--backgroundColor);
+    color: aqua;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotateZ(-15deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-15deg);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}

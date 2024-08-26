@@ -1,0 +1,28 @@
+.activeDot {
+    background-color: var(--peach) !important;
+}
+
+@media screen and (min-width: 920px) {
+    .app__navigation {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        top: 26%;
+        right: 0;
+        margin-right: 30px;
+        z-index: 9999;
+        .navigation-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #cbcbcb;
+            margin: 0.6rem;
+            transition: background-color 0.2s ease-in-out;
+            &:hover {
+                background-color: var(--peach);
+            }
+        }
+    }
+}
