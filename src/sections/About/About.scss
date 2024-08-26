@@ -59,11 +59,11 @@
                 margin-top: -2rem;
                 opacity: 0;
                 transition: all 200ms ease;
+                z-index: 100000;
                 img {
                     display: block;
                     height: 10rem;
                     margin: 0rem auto;
-                    z-index: 0;
                 }
             }
         }
@@ -248,7 +248,6 @@
                         display: block;
                         height: 7.5rem;
                         margin-left: 2.3rem;
-                        z-index: 0;
                     }
                 }
             }
@@ -360,7 +359,6 @@
                         display: block;
                         height: 9rem;
                         margin-left: 4rem;
-                        z-index: 0;
                     }
                 }
             }

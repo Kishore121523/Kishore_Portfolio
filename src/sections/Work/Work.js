@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 import {
   Notezy,
   MathConf,
-  donate,
+  wealthSimple,
   githubFinder,
   travel,
   weathery,
@@ -226,9 +226,18 @@ const Work = () => {
                 github="https://github.com/Kishore121523/Notezy"
                 liveLink="https://chrome.google.com/webstore/detail/notezy/nlgngaailkikjkecgjogfdblapgalepl"
                 heading="Notezy"
-                desc="An CRUD Based Note Taking Exntension with modern UI"
+                desc="CRUD Based Note Taking Exntension with modern UI"
                 category="WebDev"
                 image={Notezy}
+                externalLink={true}
+              ></CardWork>
+              <CardWork
+                liveLink="https://wealthwise-coral.vercel.app/"
+                github="https://github.com/Kishore121523/WealthSimple"
+                heading="WealthSimple"
+                desc="Modern Banking and real time Money Transfer Website"
+                category="WebDev"
+                image={wealthSimple}
                 externalLink={true}
               ></CardWork>
               <CardWork
@@ -241,29 +250,10 @@ const Work = () => {
                 externalLink={true}
               ></CardWork>
               <CardWork
-                liveLink="https://kishore121523.github.io/Donate_spark/"
-                github="https://github.com/Kishore121523/Donate_spark"
-                heading="Don-Spark"
-                desc="A Donation Based Website with payment integrated"
-                category="WebDev"
-                image={donate}
-                externalLink={true}
-              ></CardWork>
-
-              <CardWork
-                liveLink="https://kishore121523.github.io/Travel/"
-                github="https://github.com/Kishore121523/Travel"
-                heading="Travillie"
-                desc="Webpage designed for a travel agency (Demo Project)s"
-                category="WebDev"
-                image={travel}
-                externalLink={true}
-              ></CardWork>
-              <CardWork
                 liveLink="https://weathery-6zsb.onrender.com/"
                 github="https://github.com/Kishore121523/WeatherAppNode"
                 heading="Weathery"
-                desc="A modern weather app using Node.js and Handlebars"
+                desc="Weather app using Node.js and Handlebars"
                 category="WebDev"
                 image={weathery}
                 externalLink={true}
@@ -277,11 +267,22 @@ const Work = () => {
                 image={githubFinder}
                 externalLink={true}
               ></CardWork>
+
+              <CardWork
+                liveLink="https://kishore121523.github.io/Travel/"
+                github="https://github.com/Kishore121523/Travel"
+                heading="Travillie"
+                desc="Webpage designed for a travel agency (Demo Project)"
+                category="WebDev"
+                image={travel}
+                externalLink={true}
+              ></CardWork>
+
               <CardWork
                 liveLink="https://kishore121523.github.io/Professional-Website---Rice-Mill-Association/"
                 github="https://github.com/Kishore121523/Professional-Website---Rice-Mill-Association"
                 heading="Rice Mill Site"
-                desc="An CRUD Based Note Taking Exntension with modern UI"
+                desc="Website to showcase a Rice mill and the products they deliver"
                 category="WebDev"
                 image={riceMill}
                 externalLink={true}

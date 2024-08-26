@@ -434,7 +434,7 @@
                 .contact-bottom {
                     display: flex;
                     width: 100%;
-                    margin-top: 9rem;
+                    margin-top: 0rem;
                     align-items: center;
                     justify-content: space-between;
                     flex-direction: row;
@@ -448,6 +448,7 @@
                             background: var(--backgroundColor);
                             border-radius: 5px;
                             margin-right: 1rem;
+                            margin-top: 6rem;
                             a {
                                 color: var(--halfWhite);
                                 transition: color 200ms ease;
@@ -548,9 +549,13 @@
                     margin-top: 14%;
                     .contact-social-media ul {
                         gap: 3rem;
+                        li {
+                            margin-top: 10rem;
+                        }
                     }
                     .copyright {
                         gap: 3px;
+                        margin-top: 7rem;
                         p {
                             font-size: 0.85rem;
                         }

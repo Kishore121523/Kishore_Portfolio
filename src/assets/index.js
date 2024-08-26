@@ -1,6 +1,6 @@
 export { default as Notezy } from "./WebDev/notezy.jpg";
 export { default as MathConf } from "./WebDev/MathConf.jpg";
-export { default as donate } from "./WebDev/donate.jpg";
+export { default as wealthSimple } from "./WebDev/wealthSimple.png";
 export { default as githubFinder } from "./WebDev/githubFinder.png";
 export { default as riceMill } from "./WebDev/riceMill.jpg";
 export { default as travel } from "./WebDev/travel.jpg";
@@ -47,3 +47,6 @@ export { default as react } from "./skills/react.png";
 export { default as sass } from "./skills/sass.png";
 export { default as tf } from "./skills/tf.png";
 export { default as xd } from "./skills/xd.png";
+export { default as next } from "./skills/next.png";
+export { default as tailwind } from "./skills/tailwind.png";
+export { default as kotlin } from "./skills/kotlin.png";
