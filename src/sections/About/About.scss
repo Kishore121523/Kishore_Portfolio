@@ -243,6 +243,7 @@
                 align-items: flex-start;
                 .avatar {
                     display: block;
+                    width: fit-content;
                     margin-top: -1.5rem;
                     img {
                         display: block;
@@ -354,6 +355,7 @@
             .nameAbout {
                 .avatar {
                     display: block;
+                    width: fit-content;
                     margin-top: -1.5rem;
                     img {
                         display: block;
