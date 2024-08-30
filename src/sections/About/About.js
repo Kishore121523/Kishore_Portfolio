@@ -45,7 +45,7 @@ const About = () => {
     });
 
     let avatarAnime = anime({
-      targets: ".avatar",
+      targets: "",
       opacity: 1,
       duration: 1000,
       autoplay: false,
