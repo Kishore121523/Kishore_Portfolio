@@ -232,7 +232,7 @@ const Work = () => {
                 externalLink={true}
               ></CardWork>
               <CardWork
-                liveLink="https://wealthwise-coral.vercel.app/"
+                liveLink="https://wealthsimple-coral.vercel.app/"
                 github="https://github.com/Kishore121523/WealthSimple"
                 heading="WealthSimple"
                 desc="Modern Banking and real time Money Transfer Website"
