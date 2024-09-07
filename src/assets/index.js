@@ -50,3 +50,10 @@ export { default as xd } from "./skills/xd.png";
 export { default as next } from "./skills/next.png";
 export { default as tailwind } from "./skills/tailwind.png";
 export { default as kotlin } from "./skills/kotlin.png";
+
+export { default as grid1 } from "./grid1.png";
+export { default as grid2 } from "./grid2.png";
+export { default as grid3 } from "./grid3.png";
+export { default as grid4 } from "./grid4.png";
+export { default as tick } from "./tick.svg";
+export { default as copy } from "./copy.svg";

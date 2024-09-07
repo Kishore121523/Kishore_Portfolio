@@ -1,12 +1,8 @@
-import { React, useState } from "react";
-import grid1 from "../../assets/grid1.png";
-import grid2 from "../../assets/grid2.png";
-import grid3 from "../../assets/grid3.png";
-import grid4 from "../../assets/grid4.png";
-import tick from "../../assets/tick.svg";
-import copy from "../../assets/copy.svg";
+import { React, useState, useEffect } from "react";
+import { grid1, grid2, grid3, grid4, tick, copy } from "../../assets";
 import { Link } from "react-scroll";
-
+import { useInView } from "react-intersection-observer";
+import anime from "animejs/lib/anime.es.js";
 import Globe from "react-globe.gl";
 
 const AboutNew = () => {
@@ -19,20 +15,89 @@ const AboutNew = () => {
       sethasCopied(false);
     }, 2000);
   };
+
+  const { ref: aboutSection, inView: isIntersectingSkills } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    let aboutAnimation = anime.timeline({
+      easing: "easeOutExpo",
+      duration: 8000,
+      autoplay: false,
+    });
+
+    aboutAnimation.add({
+      targets: ".grid1",
+      easing: "easeInOutQuad",
+      opacity: [0, 1],
+      translateX: ["-30%", "0%"],
+      duration: 1500,
+    });
+    aboutAnimation.add(
+      {
+        targets: ".grid4",
+        easing: "easeInOutQuad",
+        opacity: [0, 1],
+        translateX: ["-30%", "0%"],
+        duration: 1500,
+      },
+      "-100"
+    );
+    aboutAnimation.add(
+      {
+        targets: ".grid2",
+        easing: "easeInOutQuad",
+        opacity: [0, 1],
+        translateY: ["-30%", "0%"],
+        duration: 1500,
+      },
+      "-100"
+    );
+    aboutAnimation.add(
+      {
+        targets: ".grid3",
+        easing: "easeInOutQuad",
+        opacity: [0, 1],
+        translateX: ["30%", "0%"],
+        duration: 1500,
+      },
+      "-100"
+    );
+
+    aboutAnimation.add(
+      {
+        targets: ".grid5",
+        easing: "easeInOutQuad",
+        opacity: [0, 1],
+        translateY: ["30%", "0%"],
+        duration: 1500,
+      },
+      "-100"
+    );
+
+    if (isIntersectingSkills) {
+      aboutAnimation.play();
+      return;
+    }
+  }, [isIntersectingSkills]);
+
   return (
     <section
+      ref={aboutSection}
       id="about"
       className="lg:py-[3.5rem] lg:mt-[1rem] lg:px-[8rem] px-10"
     >
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container">
+          <div className="grid-container grid1">
             <img
               src={grid1}
               alt="grid-1"
-              className="w-full sm:h-[276px] h-fit object-contain"
+              className="w-full sm:h-[276px] h-fit object-contain "
             />
-            <div className="">
+            <div>
               <p className="grid-headtext">Hi, I'm Kishore</p>
               <p className="grid-subtext">
                 Hey, I’m a web developer and designer with a knack for turning
@@ -43,7 +108,7 @@ const AboutNew = () => {
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-3">
+        <div className="col-span-1 xl:row-span-3 grid2">
           <div className="grid-container">
             <img
               src={grid2}
@@ -61,7 +126,7 @@ const AboutNew = () => {
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-4">
+        <div className="col-span-1 xl:row-span-4 grid3">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
@@ -109,7 +174,7 @@ const AboutNew = () => {
           </div>
         </div>
 
-        <div className="xl:col-span-2 xl:row-span-3">
+        <div className="xl:col-span-2 xl:row-span-3 grid4">
           <div className="grid-container">
             <img
               src={grid3}
@@ -128,7 +193,7 @@ const AboutNew = () => {
           </div>
         </div>
 
-        <div className="xl:col-span-1 xl:row-span-2">
+        <div className="xl:col-span-1 xl:row-span-2 grid5">
           <div className="grid-container">
             <img
               src={grid4}

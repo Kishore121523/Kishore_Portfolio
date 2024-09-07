@@ -12,7 +12,7 @@ const Home = () => {
     });
     homeAnime.add({
       targets: ".nameDiv",
-      translateX: ["-100%", "0"],
+      translateX: ["-30%", "0"],
       easing: "easeOutExpo",
     });
     homeAnime.add(
