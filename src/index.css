@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 /* variables */
@@ -58,6 +61,38 @@ select:focus,
 input:focus,
 textarea:focus {
     outline: none;
+}
+
+@layer utilities {
+
+.grid-container {
+    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5 lg:text-start text-center;
+  }
+
+  .grid-headtext {
+    @apply text-xl font-semibold mb-2 text-[#f4ae95];
+  }
+
+  .grid-subtext {
+    @apply text-[#afb0b6] text-base;
+  }
+
+  .copy-container {
+    @apply cursor-pointer flex justify-center items-center gap-2;
+  }
+
+  .btn {
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
+  }
+
+
+  .btn-ping {
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29de29] opacity-75;
+  }
+
+  .btn-ping_dot {
+    @apply relative inline-flex rounded-full h-3 w-3 bg-[#22c022] ;
+  }
 }
 
 @keyframes wave {

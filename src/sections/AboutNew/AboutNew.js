@@ -1,0 +1,150 @@
+import { React, useState } from "react";
+import grid1 from "../../assets/grid1.png";
+import grid2 from "../../assets/grid2.png";
+import grid3 from "../../assets/grid3.png";
+import grid4 from "../../assets/grid4.png";
+import tick from "../../assets/tick.svg";
+import copy from "../../assets/copy.svg";
+import { Link } from "react-scroll";
+
+import Globe from "react-globe.gl";
+
+const AboutNew = () => {
+  const [hasCopied, sethasCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText("kishore231512@gmail.com");
+    sethasCopied(true);
+
+    setTimeout(() => {
+      sethasCopied(false);
+    }, 2000);
+  };
+  return (
+    <section id="about" className="lg:py-[4rem] lg:px-[8rem] px-10">
+      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+        <div className="col-span-1 xl:row-span-3">
+          <div className="grid-container">
+            <img
+              src={grid1}
+              alt="grid-1"
+              className="w-full sm:h-[276px] h-fit object-contain"
+            />
+            <div className="">
+              <p className="grid-headtext">Hi, I'm Kishore</p>
+              <p className="grid-subtext">
+                Hey! With 3 years of web development under my belt. I create
+                dynamic, responsive websites that not only look great but
+                provide a smooth, enjoyable user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-span-1 xl:row-span-3">
+          <div className="grid-container">
+            <img
+              src={grid2}
+              alt="grid2"
+              className="w-full mx-auto sm:w-[276px] h-fit object-contain"
+            />
+            <div>
+              <p className="grid-headtext">Tech Stack</p>
+              <p className="grid-subtext">
+                I specialize in a wide range of languages, frameworks, and tools
+                that enable me to build robust, scalable applications tailored
+                to meet modern web demands.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-span-1 xl:row-span-4">
+          <div className="grid-container">
+            <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
+              <Globe
+                height={326}
+                width={326}
+                backgroundColor="rgba(0,0,0,0)"
+                backgroundImageOpacity={0.5}
+                showAtmosphere
+                showGraticules
+                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                labelsData={[
+                  {
+                    lat: 48.380894,
+                    lng: -89.247681,
+                    text: "I'm here!",
+                    size: 2000,
+                  },
+                ]}
+              />
+            </div>
+            <div>
+              <p className="grid-headtext">
+                I work remotely across most time zones!
+              </p>
+              <p className="grid-subtext">
+                I'm based in Canada with remote work available.
+              </p>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={750}
+              >
+                <button className={`btn w-full mt-10 text-[18px]`}>
+                  <span className="relative flex h-3 w-3">
+                    <span className="btn-ping"></span>
+                    <span className="btn-ping_dot"></span>
+                  </span>
+                  Contact Me
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="xl:col-span-2 xl:row-span-3">
+          <div className="grid-container">
+            <img
+              src={grid3}
+              alt="grid3"
+              className="w-full sm:h-[266px] h-full object-contain"
+            />
+            <div>
+              <p className="grid-headtext">My Passion for Coding</p>
+              <p className="grid-subtext">
+                I love solving problems and building through code. Programming
+                isn’t just a profession for me, it’s my passion. I thrive on
+                exploring new technologies and constantly leveling up my skills.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="xl:col-span-1 xl:row-span-2">
+          <div className="grid-container">
+            <img
+              src={grid4}
+              alt="grid4"
+              className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+            />
+            <div className="space-y-2">
+              <p className="grid-subtext text-center">Contact me</p>
+              <div className="copy-container" onClick={handleCopy}>
+                <img src={hasCopied ? tick : copy} alt="copy" />
+                <p className="lg:text-xl md:text-lg font-medium text-white-600">
+                  kishore231512@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutNew;
