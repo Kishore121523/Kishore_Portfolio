@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Home, AboutNew, Work, Skills, Contact } from "./sections";
+import { Home, About, Work, Skills, Contact } from "./sections";
 import {
   Preloader,
   Wrapper,
@@ -17,8 +17,7 @@ const App = () => {
         <NavigationDots></NavigationDots>
         <Navbar></Navbar>
         <Home></Home>
-        <AboutNew></AboutNew>
-        {/* <About></About> */}
+        <About></About>
         <Work></Work>
         <Skills></Skills>
         <Contact></Contact>

@@ -49,34 +49,6 @@ const Contact = () => {
       autoplay: false,
     });
 
-    contactAnimation.add(
-      {
-        targets: ".contact-phone",
-        opacity: 1,
-        easing: "easeOutBack",
-        duration: 400,
-      },
-      "-50"
-    );
-
-    contactAnimation.add({
-      targets: ".contact-social-media .fontAwesomeIconContact",
-      easing: "easeOutBack",
-      opacity: 1,
-      delay: anime.stagger(500),
-      direction: "reverse",
-      duration: 200,
-    });
-
-    contactAnimation.add({
-      targets: ".copyright p",
-      easing: "easeOutBack",
-      opacity: 1,
-      delay: anime.stagger(500),
-      direction: "reverse",
-      duration: 400,
-    });
-
     if (isIntersectingContact) {
       contactAnimation.play();
     } else {
@@ -121,10 +93,6 @@ const Contact = () => {
                 </defs>
               </svg>
             </motion.div>
-            {/* 
-            <div className="contact-head">
-              <p>Let's Get in Touch</p>
-            </div> */}
 
             <div className="contact-top">
               <div className="contact-phone">

@@ -54,7 +54,7 @@
                     width: 100%;
                     .skills-img {
                         width: 3rem;
-                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.7), 4px 4px 4px rgba(0, 0, 0, 0.8), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
                         background: var(--backgroundColor);
                         border-radius: 50%;
                         padding: 8px;
@@ -247,35 +247,6 @@
                             border-radius: 50%;
                             padding: 0.9rem;
                             transition: box-shadow 300ms ease-in-out;
-                            // &:hover {
-                            //     animation: hvr-wobble-horizontal 1s;
-                            // }
-                            // @keyframes hvr-wobble-horizontal {
-                            //     16.65% {
-                            //         -webkit-transform: translateX(4px);
-                            //         transform: translateX(4px);
-                            //     }
-                            //     33.3% {
-                            //         -webkit-transform: translateX(-3px);
-                            //         transform: translateX(-3px);
-                            //     }
-                            //     49.95% {
-                            //         -webkit-transform: translateX(2px);
-                            //         transform: translateX(2px);
-                            //     }
-                            //     66.6% {
-                            //         -webkit-transform: translateX(-1px);
-                            //         transform: translateX(-1px);
-                            //     }
-                            //     83.25% {
-                            //         -webkit-transform: translateX(1px);
-                            //         transform: translateX(1px);
-                            //     }
-                            //     100% {
-                            //         -webkit-transform: translateX(0);
-                            //         transform: translateX(0);
-                            //     }
-                            // }
                         }
                     }
                     .skills-desc {

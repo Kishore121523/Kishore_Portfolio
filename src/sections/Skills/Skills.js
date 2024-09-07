@@ -109,18 +109,37 @@ const Skills = () => {
             <hr className="skills-head-hr" />
           </div>
           <div className="skills-main">
-            <div className="skills-logos">
+            <div className="skills-logos grid-container-skills">
               {imgArr.map((data) => (
                 <SkillImg src={data}></SkillImg>
               ))}
             </div>
             <div className="skills-desc scrollbar" id="style-4">
               <div className="skills-year">
+                <p className="skills-current-year">2024</p>
+                <div className="skills-year-desc">
+                  <SkillsDesc
+                    name="Masters in Computer Science"
+                    provider="Lakehead University"
+                  ></SkillsDesc>
+                  <br />
+                  <SkillsDesc
+                    name="Google DevFest Hackathon - Runner Up"
+                    provider="Google"
+                  ></SkillsDesc>
+                </div>
+              </div>
+              <div className="skills-year">
                 <p className="skills-current-year">2023</p>
                 <div className="skills-year-desc">
                   <SkillsDesc
                     name="Advanced Learning Algorithms"
                     provider="Stanford Online"
+                  ></SkillsDesc>
+                  <br />
+                  <SkillsDesc
+                    name="Bachelors in Computer Science"
+                    provider="SASTRA University"
                   ></SkillsDesc>
                   <br />
                   <SkillsDesc
@@ -140,11 +159,6 @@ const Skills = () => {
                   <SkillsDesc
                     name="Machine Learning OnRamp"
                     provider="MathWorks"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Hackerrank CSS Certificate"
-                    provider="HackerRank"
                   ></SkillsDesc>
                   <br />
                   <SkillsDesc
