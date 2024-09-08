@@ -128,7 +128,7 @@ const AboutNew = () => {
 
         <div className="col-span-1 xl:row-span-4 grid3">
           <div className="grid-container">
-            <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
+            <div className="rounded-3xl w-full sm:h-[326px] xl:h-[406px] h-fit flex justify-center items-center">
               <Globe
                 height={326}
                 width={326}
@@ -149,7 +149,7 @@ const AboutNew = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext">
+              <p className="grid-headtext md:mt-[-2rem]">
                 I work remotely across most time zones!
               </p>
               <p className="grid-subtext">
@@ -179,10 +179,12 @@ const AboutNew = () => {
             <img
               src={grid3}
               alt="grid3"
-              className="w-full sm:h-[266px] h-full object-contain"
+              className="w-full sm:h-[300px] h-full object-contain flex items-center justify-center"
             />
             <div>
-              <p className="grid-headtext">My Passion for Coding</p>
+              <p className="grid-headtext md:mt-[1rem] xl:mt-[1.5rem]">
+                My Passion for Coding
+              </p>
               <p className="grid-subtext">
                 Code is my playground, and I love building cool stuff with it.
                 It’s more than a job - it’s what that gets me excited every day.
@@ -198,7 +200,7 @@ const AboutNew = () => {
             <img
               src={grid4}
               alt="grid4"
-              className="w-full lg:h-[180px] md:h-[126px] h-fit object-cover sm:object-top"
+              className="w-full lg:h-[180px] md:h-[106px] h-fit object-cover sm:object-top"
             />
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>
