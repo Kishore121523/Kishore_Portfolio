@@ -110,7 +110,7 @@ const Contact = () => {
             <div></div>
             <div className="contactNameDiv1">
               <div className="contactContent">
-                <p className="name">Contact me?</p>
+                <p className="name">Contact me</p>
                 <p className="role">Write a mail</p>
                 <div>
                   <a

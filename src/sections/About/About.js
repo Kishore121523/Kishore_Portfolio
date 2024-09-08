@@ -90,8 +90,8 @@ const AboutNew = () => {
       className="lg:py-[3.5rem] lg:mt-[1rem] lg:px-[8rem] px-10"
     >
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-        <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container grid1">
+        <div className="col-span-1 xl:row-span-3 grid1">
+          <div className="grid-container">
             <img
               src={grid1}
               alt="grid-1"
@@ -198,7 +198,7 @@ const AboutNew = () => {
             <img
               src={grid4}
               alt="grid4"
-              className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+              className="w-full lg:h-[180px] md:h-[126px] h-fit object-cover sm:object-top"
             />
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>

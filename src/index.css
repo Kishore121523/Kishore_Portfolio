@@ -69,9 +69,11 @@ textarea:focus {
     width: 100%;
     height: 100%;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
     gap: 1.25rem;
     text-align: center;
 }
@@ -88,17 +90,13 @@ textarea:focus {
 @media (min-width: 640px) {
     .grid-container{
         padding: 1.75rem /* 28px */;
+        text-align: start;
 }
     .grid-container-skills{
         padding: 2rem /* 28px */;
 }
 }
 
-@media (min-width: 1024px) {
-  .grid-container{
-        text-align: start;
-}
-}
 
 @layer utilities {
 
