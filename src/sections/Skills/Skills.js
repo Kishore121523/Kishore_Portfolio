@@ -119,6 +119,11 @@ const Skills = () => {
                 <p className="skills-current-year">2024</p>
                 <div className="skills-year-desc">
                   <SkillsDesc
+                    name="React - The Complete Guide 2024 (incl. Next.js, Redux)"
+                    provider="Udemy"
+                  ></SkillsDesc>
+                  <br />
+                  <SkillsDesc
                     name="Masters in Computer Science"
                     provider="Lakehead University"
                   ></SkillsDesc>

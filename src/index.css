@@ -74,6 +74,7 @@ textarea:focus {
     flex-direction: column;
     gap: 1.25rem;
     text-align: center;
+    place-content: center
 }
 
 .grid-container-skills{

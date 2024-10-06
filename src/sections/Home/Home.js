@@ -49,9 +49,11 @@ const Home = () => {
             <p className="greeting">Hi, I am</p>
             <p className="name">- Kishore -</p>
             <p className="role">
-              Developer and Designer with 3 years of experience. I pride myself
-              on my ability to create visually appealing and user-friendly
-              designs that are both functional and visually pleasing.
+              Developer and Designer with 3 years of experience developing full
+              stack web applications. Recent graduate with multiple internship
+              experience, working closely with senior tech leads, and passionate
+              about building user-centric websites that deliver exceptional user
+              experiences.
             </p>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import anime from "animejs/lib/anime.es.js";
 import Globe from "react-globe.gl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AboutNew = () => {
   const [hasCopied, sethasCopied] = useState(false);
@@ -87,7 +88,7 @@ const AboutNew = () => {
     <section
       ref={aboutSection}
       id="about"
-      className="lg:py-[3.5rem] lg:mt-[1rem] lg:px-[8rem] px-10"
+      className="lg:py-[6rem] lg:mt-[1rem] lg:px-[8rem] px-10"
     >
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3 grid1">
@@ -98,7 +99,8 @@ const AboutNew = () => {
               className="w-full sm:h-[276px] h-fit object-contain "
             />
             <div>
-              <p className="grid-headtext">Hi, I'm Kishore</p>
+              <p className="grid-headtext flex items-center">Hi, I'm Kishore</p>
+
               <p className="grid-subtext">
                 Hey, I’m a web developer and designer with a knack for turning
                 ideas into sleek, functional websites. Let’s make the internet a
@@ -130,8 +132,8 @@ const AboutNew = () => {
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] xl:h-[406px] h-fit flex justify-center items-center">
               <Globe
-                height={326}
-                width={326}
+                height={356}
+                width={356}
                 backgroundColor="rgba(0,0,0,0)"
                 backgroundImageOpacity={0.5}
                 showAtmosphere
@@ -143,7 +145,7 @@ const AboutNew = () => {
                     lat: 48.380894,
                     lng: -89.247681,
                     text: "I'm here!",
-                    size: 2000,
+                    size: 1000,
                   },
                 ]}
               />
@@ -162,7 +164,7 @@ const AboutNew = () => {
                 offset={0}
                 duration={750}
               >
-                <button className={`btn w-full mt-10 text-[18px]`}>
+                <button className={`btn w-full mt-4 text-[18px]`}>
                   <span className="relative flex h-3 w-3">
                     <span className="btn-ping"></span>
                     <span className="btn-ping_dot"></span>
@@ -170,6 +172,19 @@ const AboutNew = () => {
                   Contact Me
                 </button>
               </Link>
+              <a href="/Resume.pdf" download="Resume.pdf">
+                <button
+                  className={`btn w-full mt-4 text-[15px] border !border-[#7f5b4d]`}
+                >
+                  <div className="mr-[-5px] text-[13px]">
+                    <FontAwesomeIcon
+                      icon="fa-solid fa-download"
+                      className="mr-0"
+                    />
+                  </div>
+                  Resume
+                </button>
+              </a>
             </div>
           </div>
         </div>

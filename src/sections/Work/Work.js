@@ -223,21 +223,21 @@ const Work = () => {
           <div className="displayBlock">
             <div ref={webRef} id="webdev" className="work-cards">
               <CardWork
-                github="https://github.com/Kishore121523/Notezy"
-                liveLink="https://chrome.google.com/webstore/detail/notezy/nlgngaailkikjkecgjogfdblapgalepl"
-                heading="Notezy"
-                desc="CRUD Based Note Taking Exntension with modern UI"
-                category="WebDev"
-                image={Notezy}
-                externalLink={true}
-              ></CardWork>
-              <CardWork
                 liveLink="https://wealthsimple-coral.vercel.app/"
                 github="https://github.com/Kishore121523/WealthSimple"
                 heading="WealthSimple"
                 desc="Modern Banking and real time Money Transfer Website"
                 category="WebDev"
                 image={wealthSimple}
+                externalLink={true}
+              ></CardWork>
+              <CardWork
+                github="https://github.com/Kishore121523/Notezy"
+                liveLink="https://chrome.google.com/webstore/detail/notezy/nlgngaailkikjkecgjogfdblapgalepl"
+                heading="Notezy"
+                desc="CRUD Based Note Taking Exntension with modern UI"
+                category="WebDev"
+                image={Notezy}
                 externalLink={true}
               ></CardWork>
               <CardWork
