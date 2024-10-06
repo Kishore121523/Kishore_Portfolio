@@ -293,13 +293,13 @@ const Work = () => {
             <div ref={brandRef} id="brand" className="work-cards">
               <CardWork
                 heading="Tent Card"
-                desc="Tent Card Designed for a startup"
+                desc="Tent card design for a startup"
                 image={a_brand}
                 category="Branding"
               ></CardWork>
               <CardWork
                 heading="Thank you card!"
-                desc="A token of love for ya all, clean and pleasant looking design!"
+                desc="A token of love for ya all!"
                 image={b_brand}
                 category="Branding"
               ></CardWork>
@@ -311,25 +311,25 @@ const Work = () => {
               ></CardWork>
               <CardWork
                 heading="Menu Card"
-                desc="Menu Card Design for a Multicuisine Restaurant (Pitch)"
+                desc="Menu card design for a Multicuisine Restaurant (Pitch)"
                 image={d_brand}
                 category="Branding"
               ></CardWork>
               <CardWork
                 heading="Offer Promotion"
-                desc="Make it pop! Make it crisp! Make it Clear!"
+                desc="Make it pop! Make it crisp! Make it clear!"
                 image={e_brand}
                 category="Branding"
               ></CardWork>
               <CardWork
                 heading="Menu Card"
-                desc="Menu Card Design for a Multicuisine Restaurant (Pitch)"
+                desc="Menu card design for a Multicuisine Restaurant (Pitch)"
                 image={f_brand}
                 category="Branding"
               ></CardWork>
               <CardWork
                 heading="Visiting Card"
-                desc="Visiting card for employess for a Finance company"
+                desc="Designed Visiting cards for employess at a Finance company"
                 image={g_brand}
                 category="Branding"
               ></CardWork>
