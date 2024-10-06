@@ -96,11 +96,10 @@ const AboutNew = () => {
             <img
               src={grid1}
               alt="grid-1"
-              className="w-full sm:h-[276px] h-fit object-contain "
+              className="w-full sm:h-[276px] h-fit object-contain"
             />
             <div>
-              <p className="grid-headtext flex items-center">Hi, I'm Kishore</p>
-
+              <p className="grid-headtext">Hi, I'm Kishore</p>
               <p className="grid-subtext">
                 Hey, I’m a web developer and designer with a knack for turning
                 ideas into sleek, functional websites. Let’s make the internet a
