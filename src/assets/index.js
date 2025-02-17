@@ -3,8 +3,7 @@ export { default as MathConf } from "./WebDev/MathConf.jpg";
 export { default as wealthSimple } from "./WebDev/wealthSimple.png";
 export { default as githubFinder } from "./WebDev/githubFinder.png";
 export { default as riceMill } from "./WebDev/riceMill.jpg";
-export { default as travel } from "./WebDev/travel.jpg";
-export { default as weathery } from "./WebDev/weathery.jpg";
+export { default as vaultic } from "./WebDev/vaultic.png";
 
 export { default as a_brand } from "./Branding/a.jpg";
 export { default as b_brand } from "./Branding/b.jpg";

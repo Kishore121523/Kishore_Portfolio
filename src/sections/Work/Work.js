@@ -9,8 +9,7 @@ import {
   MathConf,
   wealthSimple,
   githubFinder,
-  travel,
-  weathery,
+  vaultic,
   riceMill,
   a_brand,
   b_brand,
@@ -223,6 +222,15 @@ const Work = () => {
           <div className="displayBlock">
             <div ref={webRef} id="webdev" className="work-cards">
               <CardWork
+                liveLink="https://vaultic.vercel.app/"
+                github="https://github.com/Kishore121523/Vaultic"
+                heading="Vaultic"
+                desc="A cloud storage solution for efficient file organization and secure sharing."
+                category="WebDev"
+                image={vaultic}
+                externalLink={true}
+              ></CardWork>
+              <CardWork
                 liveLink="https://wealthsimple-coral.vercel.app/"
                 github="https://github.com/Kishore121523/WealthSimple"
                 heading="WealthSimple"
@@ -250,31 +258,12 @@ const Work = () => {
                 externalLink={true}
               ></CardWork>
               <CardWork
-                liveLink="https://weathery-6zsb.onrender.com/"
-                github="https://github.com/Kishore121523/WeatherAppNode"
-                heading="Weathery"
-                desc="Weather app using Node.js and Handlebars"
-                category="WebDev"
-                image={weathery}
-                externalLink={true}
-              ></CardWork>
-              <CardWork
                 github="https://github.com/Kishore121523/Github-Users-Finder"
                 liveLink="https://kishore121523.github.io/Github-Users-Finder/"
                 heading="Github Profile Finder"
                 desc="Displays the name and general information of a user signed up on Github."
                 category="WebDev"
                 image={githubFinder}
-                externalLink={true}
-              ></CardWork>
-
-              <CardWork
-                liveLink="https://kishore121523.github.io/Travel/"
-                github="https://github.com/Kishore121523/Travel"
-                heading="Travillie"
-                desc="Webpage designed for a travel agency (Demo Project)"
-                category="WebDev"
-                image={travel}
                 externalLink={true}
               ></CardWork>
 
@@ -419,7 +408,6 @@ const Work = () => {
                 image={f_MR}
                 category="Marketing"
               ></CardWork>
-
               <CardWork
                 heading="Facts and Stats"
                 desc="Modern design for showcasing stats using glassmorphism style!"
