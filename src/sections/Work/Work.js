@@ -35,8 +35,51 @@ import {
 } from "../../assets";
 
 import CardWork from "../../components/CardWork/CardWork";
+import {
+  brandingProjects,
+  projects,
+  graphicDesignProjects,
+  marketingProjects,
+} from "../../utils";
 
 const Work = () => {
+  const projectImage = {
+    vaultic,
+    wealthSimple,
+    Notezy,
+    MathConf,
+    githubFinder,
+    riceMill,
+  };
+
+  const brandingImage = {
+    a_brand,
+    b_brand,
+    c_brand,
+    d_brand,
+    e_brand,
+    f_brand,
+    g_brand,
+  };
+  const graphicImage = {
+    a_GD,
+    b_GD,
+    c_GD,
+    d_GD,
+    e_GD,
+    f_GD,
+    g_GD,
+  };
+  const marketingImage = {
+    a_MR,
+    b_MR,
+    c_MR,
+    d_MR,
+    e_MR,
+    f_MR,
+    h_MR,
+  };
+
   const { ref: workSection, inView: isIntersectingWork } = useInView({
     threshold: 0.2,
   });
@@ -108,85 +151,30 @@ const Work = () => {
 
   cardAnime.play();
 
-  const devBtn = (event) => {
+  const toggleSection = (event, activeRef) => {
     cardAnime.play();
 
-    webRef.current.parentElement.classList.remove("displayNone");
-    webRef.current.parentElement.classList.add("displayBlock");
-    brandRef.current.parentElement.classList.add("displayNone");
-    brandRef.current.parentElement.classList.remove("displayBlock");
-    graphicRef.current.parentElement.classList.add("displayNone");
-    graphicRef.current.parentElement.classList.remove("displayBlock");
-    marketRef.current.parentElement.classList.add("displayNone");
-    marketRef.current.parentElement.classList.remove("displayBlock");
+    const sections = [webRef, brandRef, graphicRef, marketRef];
 
-    elements.forEach((el) => {
-      if (el.classList.contains("activeBtn")) {
-        el.classList.remove("activeBtn");
+    sections.forEach((ref) => {
+      if (ref === activeRef) {
+        ref.current.parentElement.classList.remove("displayNone");
+        ref.current.parentElement.classList.add("displayBlock");
+      } else {
+        ref.current.parentElement.classList.add("displayNone");
+        ref.current.parentElement.classList.remove("displayBlock");
       }
-      event.target.classList.add("activeBtn");
     });
+
+    elements.forEach((el) => el.classList.remove("activeBtn"));
+    event.target.classList.add("activeBtn");
   };
 
-  const brandBtn = (event) => {
-    cardAnime.play();
-
-    webRef.current.parentElement.classList.add("displayNone");
-    webRef.current.parentElement.classList.remove("displayBlock");
-    brandRef.current.parentElement.classList.remove("displayNone");
-    brandRef.current.parentElement.classList.add("displayBlock");
-    graphicRef.current.parentElement.classList.add("displayNone");
-    graphicRef.current.parentElement.classList.remove("displayBlock");
-    marketRef.current.parentElement.classList.add("displayNone");
-    marketRef.current.parentElement.classList.remove("displayBlock");
-
-    elements.forEach((el) => {
-      if (el.classList.contains("activeBtn")) {
-        el.classList.remove("activeBtn");
-      }
-      event.target.classList.add("activeBtn");
-    });
-  };
-
-  const graphicBtn = (event) => {
-    cardAnime.play();
-
-    webRef.current.parentElement.classList.add("displayNone");
-    webRef.current.parentElement.classList.remove("displayBlock");
-    graphicRef.current.parentElement.classList.remove("displayNone");
-    graphicRef.current.parentElement.classList.add("displayBlock");
-    brandRef.current.parentElement.classList.add("displayNone");
-    brandRef.current.parentElement.classList.remove("displayBlock");
-    marketRef.current.parentElement.classList.add("displayNone");
-    marketRef.current.parentElement.classList.remove("displayBlock");
-
-    elements.forEach((el) => {
-      if (el.classList.contains("activeBtn")) {
-        el.classList.remove("activeBtn");
-      }
-      event.target.classList.add("activeBtn");
-    });
-  };
-
-  const marketBtn = (event) => {
-    cardAnime.play();
-
-    marketRef.current.parentElement.classList.remove("displayNone");
-    marketRef.current.parentElement.classList.add("displayBlock");
-    webRef.current.parentElement.classList.add("displayNone");
-    webRef.current.parentElement.classList.remove("displayBlock");
-    graphicRef.current.parentElement.classList.add("displayNone");
-    graphicRef.current.parentElement.classList.remove("displayBlock");
-    brandRef.current.parentElement.classList.add("displayNone");
-    brandRef.current.parentElement.classList.remove("displayBlock");
-
-    elements.forEach((el) => {
-      if (el.classList.contains("activeBtn")) {
-        el.classList.remove("activeBtn");
-      }
-      event.target.classList.add("activeBtn");
-    });
-  };
+  // Assigning functions
+  const devBtn = (event) => toggleSection(event, webRef);
+  const brandBtn = (event) => toggleSection(event, brandRef);
+  const graphicBtn = (event) => toggleSection(event, graphicRef);
+  const marketBtn = (event) => toggleSection(event, marketRef);
 
   return (
     <section ref={workSection} id="work">
@@ -221,199 +209,49 @@ const Work = () => {
 
           <div className="displayBlock">
             <div ref={webRef} id="webdev" className="work-cards">
-              <CardWork
-                liveLink="https://vaultic.vercel.app/"
-                github="https://github.com/Kishore121523/Vaultic"
-                heading="Vaultic"
-                desc="A cloud storage solution for efficient file organization and secure sharing."
-                category="WebDev"
-                image={vaultic}
-                externalLink={true}
-              ></CardWork>
-              <CardWork
-                liveLink="https://wealthsimple-coral.vercel.app/"
-                github="https://github.com/Kishore121523/WealthSimple"
-                heading="WealthSimple"
-                desc="Modern Banking and real time Money Transfer Website"
-                category="WebDev"
-                image={wealthSimple}
-                externalLink={true}
-              ></CardWork>
-              <CardWork
-                github="https://github.com/Kishore121523/Notezy"
-                liveLink="https://chrome.google.com/webstore/detail/notezy/nlgngaailkikjkecgjogfdblapgalepl"
-                heading="Notezy"
-                desc="CRUD Based Note Taking Exntension with modern UI"
-                category="WebDev"
-                image={Notezy}
-                externalLink={true}
-              ></CardWork>
-              <CardWork
-                liveLink="https://sastra.edu/ICWAGT2022/"
-                github="https://github.com/Kishore121523/MathConference"
-                heading="Math Conference"
-                desc="Developed website for International Math Conference"
-                category="WebDev"
-                image={MathConf}
-                externalLink={true}
-              ></CardWork>
-              <CardWork
-                github="https://github.com/Kishore121523/Github-Users-Finder"
-                liveLink="https://kishore121523.github.io/Github-Users-Finder/"
-                heading="Github Profile Finder"
-                desc="Displays the name and general information of a user signed up on Github."
-                category="WebDev"
-                image={githubFinder}
-                externalLink={true}
-              ></CardWork>
-
-              <CardWork
-                liveLink="https://kishore121523.github.io/Professional-Website---Rice-Mill-Association/"
-                github="https://github.com/Kishore121523/Professional-Website---Rice-Mill-Association"
-                heading="Rice Mill Site"
-                desc="Website to showcase a Rice mill and the products they deliver"
-                category="WebDev"
-                image={riceMill}
-                externalLink={true}
-              ></CardWork>
+              {projects.map((project, index) => (
+                <CardWork
+                  key={index}
+                  {...project}
+                  image={projectImage[project.image]}
+                />
+              ))}
             </div>
           </div>
+
           <div className="displayNone">
             <div ref={brandRef} id="brand" className="work-cards">
-              <CardWork
-                heading="Tent Card"
-                desc="Tent card design for a startup"
-                image={a_brand}
-                category="Branding"
-              ></CardWork>
-              <CardWork
-                heading="Thank you card!"
-                desc="A token of love for ya all!"
-                image={b_brand}
-                category="Branding"
-              ></CardWork>
-              <CardWork
-                heading="Email Promotion"
-                desc="Creatively written and designed promotion"
-                image={c_brand}
-                category="Branding"
-              ></CardWork>
-              <CardWork
-                heading="Menu Card"
-                desc="Menu card design for a Multicuisine Restaurant (Pitch)"
-                image={d_brand}
-                category="Branding"
-              ></CardWork>
-              <CardWork
-                heading="Offer Promotion"
-                desc="Make it pop! Make it crisp! Make it clear!"
-                image={e_brand}
-                category="Branding"
-              ></CardWork>
-              <CardWork
-                heading="Menu Card"
-                desc="Menu card design for a Multicuisine Restaurant (Pitch)"
-                image={f_brand}
-                category="Branding"
-              ></CardWork>
-              <CardWork
-                heading="Visiting Card"
-                desc="Designed Visiting cards for employess at a Finance company"
-                image={g_brand}
-                category="Branding"
-              ></CardWork>
+              {brandingProjects.map((project, index) => (
+                <CardWork
+                  key={index}
+                  {...project}
+                  image={brandingImage[project.image]}
+                />
+              ))}
             </div>
           </div>
+
           <div className="displayNone">
             <div ref={graphicRef} id="graphic" className="work-cards">
-              <CardWork
-                heading="A Gentle Reminder."
-                desc="Choose colors in accordance to the design's idea"
-                image={a_GD}
-                category="Graphic Design"
-              ></CardWork>
-              <CardWork
-                heading="Afghan? Half-gone?"
-                desc="Creativity and a Good Design, always goes hand in hand"
-                image={b_GD}
-                category="Graphic Design"
-              ></CardWork>
-              <CardWork
-                heading="Practice"
-                desc="The design talks..."
-                image={c_GD}
-                category="Graphic Design"
-              ></CardWork>
-              <CardWork
-                heading="Pride"
-                desc="A minimal design, yet it conveys all the details precisely"
-                image={d_GD}
-                category="Graphic Design"
-              ></CardWork>
-              <CardWork
-                heading="Social-Me"
-                desc="Using typography and contrast to bring out the idealogy behind"
-                image={e_GD}
-                category="Graphic Design"
-              ></CardWork>
-              <CardWork
-                heading="Chaiii!"
-                desc="A poster for all Coffee Lovers out there!"
-                image={f_GD}
-                category="Graphic Design"
-              ></CardWork>
-              <CardWork
-                heading="10 to 30!"
-                desc="A great mix of colors, typography and illustration!"
-                image={g_GD}
-                category="Graphic Design"
-              ></CardWork>
+              {graphicDesignProjects.map((project, index) => (
+                <CardWork
+                  key={index}
+                  {...project}
+                  image={graphicImage[project.image]}
+                />
+              ))}
             </div>
           </div>
+
           <div className="displayNone">
             <div ref={marketRef} id="market" className="work-cards">
-              <CardWork
-                heading="Diet, what?"
-                desc="Social Media Marketing for a startup."
-                image={a_MR}
-                category="Marketing"
-              ></CardWork>
-              <CardWork
-                heading="We got your back!"
-                desc="Minimal yet Self Explanative design!"
-                image={b_MR}
-                category="Marketing"
-              ></CardWork>
-              <CardWork
-                heading="Who's joining the club?"
-                desc="Never forget to stick with the current trend!"
-                image={c_MR}
-                category="Marketing"
-              ></CardWork>
-              <CardWork
-                heading="Festive Post!"
-                desc="A Ganesha designed using the company's logo."
-                image={d_MR}
-                category="Marketing"
-              ></CardWork>
-              <CardWork
-                heading="Ramsayyy!"
-                desc="A design which instantly connects with the consumers"
-                image={e_MR}
-                category="Marketing"
-              ></CardWork>
-              <CardWork
-                heading="Food meets Music"
-                desc="Good Design means Good Business"
-                image={f_MR}
-                category="Marketing"
-              ></CardWork>
-              <CardWork
-                heading="Facts and Stats"
-                desc="Modern design for showcasing stats using glassmorphism style!"
-                image={h_MR}
-                category="Marketing"
-              ></CardWork>
+              {marketingProjects.map((project, index) => (
+                <CardWork
+                  key={index}
+                  {...project}
+                  image={marketingImage[project.image]}
+                />
+              ))}
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import SkillImg from "./SkillImg";
 import SkillsDesc from "./SkillsDesc";
 import anime from "animejs/lib/anime.es.js";
 import { useInView } from "react-intersection-observer";
+import { skillsData } from "../../utils";
 
 const Skills = () => {
   let imgArr = [
@@ -74,7 +75,6 @@ const Skills = () => {
         opacity: 1,
         delay: anime.stagger(100, { start: 100 }, { from: "center" }),
         easing: "easeOutBack",
-        // translateX: ["100%", "0%"],
         duration: 500,
       },
       "-=1000"
@@ -114,109 +114,21 @@ const Skills = () => {
                 <SkillImg src={data}></SkillImg>
               ))}
             </div>
+
             <div className="skills-desc scrollbar" id="style-4">
-              <div className="skills-year">
-                <p className="skills-current-year">2024</p>
-                <div className="skills-year-desc">
-                  <SkillsDesc
-                    name="React - The Complete Guide 2024 (incl. Next.js, Redux)"
-                    provider="Udemy"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Masters in Computer Science"
-                    provider="Lakehead University"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Google DevFest Hackathon - Runner Up"
-                    provider="Google"
-                  ></SkillsDesc>
+              {skillsData.map((yearData) => (
+                <div className="skills-year" key={yearData.year}>
+                  <p className="skills-current-year">{yearData.year}</p>
+                  <div className="skills-year-desc">
+                    {yearData.details.map((item, index) => (
+                      <div key={index}>
+                        <SkillsDesc name={item.name} provider={item.provider} />
+                        <br />
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="skills-year">
-                <p className="skills-current-year">2023</p>
-                <div className="skills-year-desc">
-                  <SkillsDesc
-                    name="Advanced Learning Algorithms"
-                    provider="Stanford Online"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Bachelors in Computer Science"
-                    provider="SASTRA University"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="The Complete Node.js Developer Course (3rd Edition)"
-                    provider="Udemy"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Supervised Machine Learning: Regression and Classification"
-                    provider="Stanford Online"
-                  ></SkillsDesc>
-                </div>
-              </div>
-              <div className="skills-year">
-                <p className="skills-current-year">2022</p>
-                <div className="skills-year-desc">
-                  <SkillsDesc
-                    name="Machine Learning OnRamp"
-                    provider="MathWorks"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Trinal Web Pvt Limited"
-                    provider="React Developer and UI/UX Designer"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Advanced Application Analyst (Intern)"
-                    provider="Accenture"
-                  ></SkillsDesc>
-                </div>
-              </div>
-
-              <div className="skills-year">
-                <p className="skills-current-year">2021</p>
-
-                <div className="skills-year-desc">
-                  <SkillsDesc
-                    name="&nbsp;Graduate Rotational Internship Program"
-                    provider="&nbsp;Web Developer"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="&nbsp;Graphic Deisgner"
-                    provider="&nbsp;Smoose (Startup)"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="&nbsp;Web Development Intern"
-                    provider="&nbsp;Sparks Foundation"
-                  ></SkillsDesc>
-                </div>
-              </div>
-              <div className="skills-year">
-                <p className="skills-current-year">2020</p>
-                <div className="skills-year-desc">
-                  <SkillsDesc
-                    name="Adobe XD - UI/UX Designing"
-                    provider="Udemy"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="JavaScript-ES6, Advanced CSS"
-                    provider="Udemy"
-                  ></SkillsDesc>
-                  <br />
-                  <SkillsDesc
-                    name="Bootstrap-4 with Projects"
-                    provider="Udemy"
-                  ></SkillsDesc>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
