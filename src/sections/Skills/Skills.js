@@ -12,6 +12,7 @@ const Skills = () => {
     "javascript",
     "react",
     "next",
+    "aws",
     "tailwind",
     "sass",
     "node",

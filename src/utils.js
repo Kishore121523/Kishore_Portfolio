@@ -195,6 +195,15 @@ export const marketingProjects = [
 
 export const skillsData = [
   {
+    year: "2025",
+    details: [
+      {
+        name: "AWS Certified Cloud Practitioner CLF-C02",
+        provider: "Udemy",
+      },
+    ],
+  },
+  {
     year: "2024",
     details: [
       {
