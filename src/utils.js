@@ -1,5 +1,14 @@
 export const projects = [
   {
+    liveLink: "https://wist-neon.vercel.app/dashboard",
+    github: "https://github.com/Kishore121523/Wist",
+    heading: "WIST",
+    desc: "Modular Goal Planning System with Reflections, and Media-Rich Tracking",
+    category: "WebDev",
+    image: "wist",
+    externalLink: true,
+  },
+  {
     liveLink: "https://vaultic.vercel.app/",
     github: "https://github.com/Kishore121523/Vaultic",
     heading: "Vaultic",
@@ -34,15 +43,6 @@ export const projects = [
     desc: "Developed website for International Math Conference",
     category: "WebDev",
     image: "MathConf",
-    externalLink: true,
-  },
-  {
-    liveLink: "https://kishore121523.github.io/Github-Users-Finder/",
-    github: "https://github.com/Kishore121523/Github-Users-Finder",
-    heading: "Github Profile Finder",
-    desc: "Displays the name and general information of a user signed up on Github.",
-    category: "WebDev",
-    image: "githubFinder",
     externalLink: true,
   },
   {
@@ -239,6 +239,10 @@ export const skillsData = [
         name: "Supervised Machine Learning: Regression and Classification",
         provider: "Stanford Online",
       },
+      {
+        name: "Advanced Application Analyst",
+        provider: "Accenture",
+      },
     ],
   },
   {
@@ -251,10 +255,6 @@ export const skillsData = [
       {
         name: "Trinal Web Pvt Limited",
         provider: "React Developer and UI/UX Designer",
-      },
-      {
-        name: "Advanced Application Analyst (Intern)",
-        provider: "Accenture",
       },
     ],
   },

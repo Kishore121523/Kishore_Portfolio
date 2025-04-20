@@ -1,7 +1,7 @@
 export { default as Notezy } from "./WebDev/notezy.jpg";
 export { default as MathConf } from "./WebDev/MathConf.jpg";
 export { default as wealthSimple } from "./WebDev/wealthSimple.png";
-export { default as githubFinder } from "./WebDev/githubFinder.png";
+export { default as wist } from "./WebDev/wist.png";
 export { default as riceMill } from "./WebDev/riceMill.jpg";
 export { default as vaultic } from "./WebDev/vaultic.png";
 

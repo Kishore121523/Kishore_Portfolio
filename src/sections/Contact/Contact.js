@@ -125,7 +125,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-bottom">
+          <div className="contact-bottom pt-auto lg:pt-[5rem] 2xl:pt-[2rem]">
             <div className="contact-social-media">
               <ul>
                 <NavSocialMedia

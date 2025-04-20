@@ -8,7 +8,7 @@ import {
   Notezy,
   MathConf,
   wealthSimple,
-  githubFinder,
+  wist,
   vaultic,
   riceMill,
   a_brand,
@@ -48,7 +48,7 @@ const Work = () => {
     wealthSimple,
     Notezy,
     MathConf,
-    githubFinder,
+    wist,
     riceMill,
   };
 
