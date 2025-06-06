@@ -3,7 +3,7 @@ export const projects = [
     liveLink: "https://wist-neon.vercel.app/dashboard",
     github: "https://github.com/Kishore121523/Wist",
     heading: "WIST",
-    desc: "Modular Goal Planning System with Reflections, and Media-Rich Tracking",
+    desc: "AI Enhanced Goal Planning System with Context Aware Suggestions.",
     category: "WebDev",
     image: "wist",
     externalLink: true,
