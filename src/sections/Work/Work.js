@@ -10,7 +10,7 @@ import {
   wealthSimple,
   wist,
   vaultic,
-  riceMill,
+  nestle,
   a_brand,
   b_brand,
   c_brand,
@@ -49,7 +49,7 @@ const Work = () => {
     Notezy,
     MathConf,
     wist,
-    riceMill,
+    nestle,
   };
 
   const brandingImage = {

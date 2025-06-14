@@ -1,9 +1,19 @@
 export const projects = [
   {
+    liveLink:
+      "https://nestle-assistant-fnancbd7d7hzfxbm.canadacentral-01.azurewebsites.net/",
+    github: "https://github.com/Kishore121523/nestle_bot",
+    heading: "Nestle AI Chatbot",
+    desc: "AI Chatbot with Hybrid RAG, Graph Reasoning, and Geolocation-based Product Search",
+    category: "WebDev",
+    image: "nestle",
+    externalLink: true,
+  },
+  {
     liveLink: "https://wist-neon.vercel.app/dashboard",
     github: "https://github.com/Kishore121523/Wist",
     heading: "WIST",
-    desc: "AI Enhanced Goal Planning System with Context Aware Suggestions.",
+    desc: "AI Enhanced Goal Planning System with Context Aware Suggestions",
     category: "WebDev",
     image: "wist",
     externalLink: true,
@@ -12,9 +22,9 @@ export const projects = [
     liveLink: "https://vaultic.vercel.app/",
     github: "https://github.com/Kishore121523/Vaultic",
     heading: "Vaultic",
-    desc: "A cloud storage solution for efficient file organization and secure sharing.",
+    desc: "A cloud storage solution for efficient file organization and secure sharing",
     category: "WebDev",
-    image: "vaultic", // Import this in the main file
+    image: "vaultic",
     externalLink: true,
   },
   {
@@ -43,17 +53,6 @@ export const projects = [
     desc: "Developed website for International Math Conference",
     category: "WebDev",
     image: "MathConf",
-    externalLink: true,
-  },
-  {
-    liveLink:
-      "https://kishore121523.github.io/Professional-Website---Rice-Mill-Association/",
-    github:
-      "https://github.com/Kishore121523/Professional-Website---Rice-Mill-Association",
-    heading: "Rice Mill Site",
-    desc: "Website to showcase a Rice mill and the products they deliver",
-    category: "WebDev",
-    image: "riceMill",
     externalLink: true,
   },
 ];
