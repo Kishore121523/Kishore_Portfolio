@@ -47,13 +47,16 @@ const Home = () => {
         <div className="nameDiv1">
           <div className="content">
             <p className="greeting">Hi, I am</p>
-            <p className="name">- Kishore -</p>
+            <p className="name">Kishore</p>
             <p className="role">
-              Developer and Designer with 3 years of experience developing full
-              stack web applications. Recent graduate with multiple internship
-              experience, working closely with senior tech leads, and passionate
-              about building user-centric websites that deliver exceptional user
-              experiences.
+              Developer and Designer with solid experience building full-stack
+              web applications using React, Next.js, Node.js, Firebase, and
+              cloud platforms like Azure and AWS. Masters graduate with hands on
+              exposure to production systems and AI-driven tooling. My current
+              focus is on building GenAI applications by integrating Azure
+              OpenAI, LangChain-style pipelines, vector databases, and Neo4j
+              knowledge graphs to deliver smart, scalable solutions that elevate
+              user experience.
             </p>
           </div>
         </div>
