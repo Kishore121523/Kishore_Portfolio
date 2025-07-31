@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import "./Work.scss";
 import anime from "animejs/lib/anime.es.js";
 import { useInView } from "react-intersection-observer";
@@ -11,83 +11,53 @@ import {
   wist,
   vaultic,
   nestle,
-  a_brand,
-  b_brand,
-  c_brand,
-  d_brand,
-  e_brand,
-  f_brand,
-  g_brand,
   a_GD,
   b_GD,
-  c_GD,
-  d_GD,
   e_GD,
-  f_GD,
-  g_GD,
   a_MR,
   b_MR,
-  c_MR,
   d_MR,
-  e_MR,
-  f_MR,
-  h_MR,
 } from "../../assets";
 
 import CardWork from "../../components/CardWork/CardWork";
-import {
-  brandingProjects,
-  projects,
-  graphicDesignProjects,
-  marketingProjects,
-} from "../../utils";
+
+// NOTE: Removed brandingProjects import.
+// We still use projects, graphicDesignProjects, and marketingProjects.
+import { devProjects, combinedGraphicProjects } from "../../utils";
 
 const Work = () => {
+  // Images for Development & AI sections
   const projectImage = {
+    wist,
     vaultic,
     wealthSimple,
     Notezy,
     MathConf,
-    wist,
     nestle,
   };
 
-  const brandingImage = {
-    a_brand,
-    b_brand,
-    c_brand,
-    d_brand,
-    e_brand,
-    f_brand,
-    g_brand,
-  };
-  const graphicImage = {
+  // Images for the combined Graphic Design section (merge former GD + MR)
+  const creativeImage = {
     a_GD,
     b_GD,
-    c_GD,
-    d_GD,
     e_GD,
-    f_GD,
-    g_GD,
-  };
-  const marketingImage = {
     a_MR,
     b_MR,
-    c_MR,
     d_MR,
-    e_MR,
-    f_MR,
-    h_MR,
   };
+
+  // Combined Graphic Design = previous Graphic + Marketing
 
   const { ref: workSection, inView: isIntersectingWork } = useInView({
     threshold: 0.2,
   });
 
   const webRef = useRef();
-  const brandRef = useRef();
+  // const aiRef = useRef();
   const graphicRef = useRef();
-  const marketRef = useRef();
+
+  // Collect buttons after mount (safe inside useEffect in real apps),
+  // but this works as-is since class names are static and page scoped.
   const elements = document.querySelectorAll(".workBtn");
 
   useEffect(() => {
@@ -134,8 +104,6 @@ const Work = () => {
 
     if (isIntersectingWork) {
       workAnimation.play();
-    } else {
-      return;
     }
   }, [isIntersectingWork]);
 
@@ -154,7 +122,8 @@ const Work = () => {
   const toggleSection = (event, activeRef) => {
     cardAnime.play();
 
-    const sections = [webRef, brandRef, graphicRef, marketRef];
+    const sections = [webRef, graphicRef]; // <--- updated
+    // const sections = [webRef, aiRef, graphicRef]; // <--- updated
 
     sections.forEach((ref) => {
       if (ref === activeRef) {
@@ -172,9 +141,8 @@ const Work = () => {
 
   // Assigning functions
   const devBtn = (event) => toggleSection(event, webRef);
-  const brandBtn = (event) => toggleSection(event, brandRef);
+  // const aiBtn = (event) => toggleSection(event, aiRef); // <--- new
   const graphicBtn = (event) => toggleSection(event, graphicRef);
-  const marketBtn = (event) => toggleSection(event, marketRef);
 
   return (
     <section ref={workSection} id="work">
@@ -186,30 +154,26 @@ const Work = () => {
 
           <ul className="work-categories">
             <li>
+              <a className="aiBtn workBtn" onClick={devBtn}>
+                AI & WebDev
+              </a>
+            </li>
+            {/* <li>
               <a className="webdevBtn activeBtn workBtn" onClick={devBtn}>
                 Development
               </a>
-            </li>
-            <li>
-              <a className="brandBtn workBtn" onClick={brandBtn}>
-                Branding
-              </a>
-            </li>
+            </li> */}
             <li>
               <a className="graphicBtn workBtn" onClick={graphicBtn}>
                 Graphic Design
               </a>
             </li>
-            <li>
-              <a className="marketBtn workBtn" onClick={marketBtn}>
-                Marketing
-              </a>
-            </li>
           </ul>
 
+          {/* Development */}
           <div className="displayBlock">
-            <div ref={webRef} id="webdev" className="work-cards">
-              {projects.map((project, index) => (
+            <div ref={webRef} id="ai" className="work-cards">
+              {devProjects.map((project, index) => (
                 <CardWork
                   key={index}
                   {...project}
@@ -219,37 +183,26 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="displayNone">
-            <div ref={brandRef} id="brand" className="work-cards">
-              {brandingProjects.map((project, index) => (
+          {/* <div className="displayNone">
+            <div ref={webRef} id="webdev" className="work-cards">
+              {aiProjects.map((project, index) => (
                 <CardWork
                   key={index}
                   {...project}
-                  image={brandingImage[project.image]}
+                  image={projectImage[project.image]}
                 />
               ))}
             </div>
-          </div>
+          </div> */}
 
+          {/* Graphic Design (Graphic + Marketing combined) */}
           <div className="displayNone">
             <div ref={graphicRef} id="graphic" className="work-cards">
-              {graphicDesignProjects.map((project, index) => (
+              {combinedGraphicProjects.map((project, index) => (
                 <CardWork
                   key={index}
                   {...project}
-                  image={graphicImage[project.image]}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="displayNone">
-            <div ref={marketRef} id="market" className="work-cards">
-              {marketingProjects.map((project, index) => (
-                <CardWork
-                  key={index}
-                  {...project}
-                  image={marketingImage[project.image]}
+                  image={creativeImage[project.image]}
                 />
               ))}
             </div>

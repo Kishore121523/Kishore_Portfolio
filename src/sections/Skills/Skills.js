@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Skills.scss";
 import SkillImg from "./SkillImg";
 import SkillsDesc from "./SkillsDesc";
@@ -8,24 +8,33 @@ import { skillsData } from "../../utils";
 
 const Skills = () => {
   let imgArr = [
-    "html",
-    "javascript",
-    "react",
-    "next",
+    "azure",
     "aws",
+    "n8n",
+    "cursor",
+    "claude",
+    "openai",
+    "mcp",
+    "python",
+    "pydantic",
+    "next",
+    "react",
+    "typescript",
+    "javascript",
     "tailwind",
-    "sass",
     "node",
     "express",
-    "kotlin",
-    "api",
     "git",
-    "django",
     "figma",
-    "cpp",
-    "ai",
-    "ps",
-    "xd",
+    // "html",
+    // "sass",
+    // "kotlin",
+    // "api",
+    // "django",
+    // "cpp",
+    // "ai",
+    // "ps",
+    // "xd",
   ];
   const { ref: skillSection, inView: isIntersectingSkills } = useInView({
     threshold: 0.2,

@@ -5,14 +5,6 @@ export { default as wist } from "./WebDev/wist.png";
 export { default as nestle } from "./WebDev/nestle.png";
 export { default as vaultic } from "./WebDev/vaultic.png";
 
-export { default as a_brand } from "./Branding/a.jpg";
-export { default as b_brand } from "./Branding/b.jpg";
-export { default as c_brand } from "./Branding/c.jpg";
-export { default as d_brand } from "./Branding/d.jpg";
-export { default as e_brand } from "./Branding/e.jpg";
-export { default as f_brand } from "./Branding/f.jpg";
-export { default as g_brand } from "./Branding/g.jpg";
-
 export { default as a_GD } from "./GraphicDesign/a_GD.jpg";
 export { default as b_GD } from "./GraphicDesign/b_GD.jpg";
 export { default as c_GD } from "./GraphicDesign/c_GD.jpg";
@@ -49,6 +41,15 @@ export { default as xd } from "./skills/xd.png";
 export { default as next } from "./skills/next.png";
 export { default as tailwind } from "./skills/tailwind.png";
 export { default as kotlin } from "./skills/kotlin.png";
+export { default as aws } from "./skills/aws.png";
+export { default as azure } from "./skills/azure.png";
+export { default as claude } from "./skills/claude.png";
+export { default as cursor } from "./skills/cursor.png";
+export { default as mcp } from "./skills/mcp.png";
+export { default as n8n } from "./skills/n8n.png";
+export { default as openai } from "./skills/openai.png";
+export { default as pydantic } from "./skills/pydantic.png";
+export { default as typescript } from "./skills/typescript.png";
 
 export { default as grid1 } from "./grid1.png";
 export { default as grid2 } from "./grid2.png";

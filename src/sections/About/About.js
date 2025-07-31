@@ -99,11 +99,11 @@ const AboutNew = () => {
               className="w-full sm:h-[276px] h-fit object-contain"
             />
             <div>
-              <p className="grid-headtext">Hi, I'm Kishore</p>
+              <p className="grid-headtext">Always Exploring</p>
               <p className="grid-subtext">
-                Hey, I’m a web developer and designer with a knack for turning
-                ideas into sleek, functional websites. Let’s make the internet a
-                little more awesome together!
+                Exploring GenAI, LLMs, and knowledge graphs to create automated,
+                visually engaging applications that seamlessly connect
+                intelligent systems with real‑world experiences.
               </p>
             </div>
           </div>
@@ -119,9 +119,9 @@ const AboutNew = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I work with a variety of languages, frameworks, and tools to
-                build scalable, reliable apps that fit perfectly into the modern
-                web puzzle.
+                Building modern, scalable applications with a mix of languages,
+                frameworks, and tools that covers everything from intuitive
+                frontends to reliable backends.
               </p>
             </div>
           </div>
