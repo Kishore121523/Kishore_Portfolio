@@ -101,9 +101,7 @@ const AboutNew = () => {
             <div>
               <p className="grid-headtext">Always Exploring</p>
               <p className="grid-subtext">
-                Exploring GenAI, LLMs, and knowledge graphs to create automated,
-                visually engaging applications that seamlessly connect
-                intelligent systems with real‑world experiences.
+              Exploring the intersection of GenAI, multimodal reasoning, and automation to create intelligent experiences that bridge human insight with machine reasoning.
               </p>
             </div>
           </div>
@@ -119,9 +117,7 @@ const AboutNew = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                Building modern, scalable applications with a mix of languages,
-                frameworks, and tools that covers everything from intuitive
-                frontends to reliable backends.
+              From frontend polish to backend precision, I work across the stack — blending web technologies, cloud platforms, and AI systems to turn complex ideas into smart, scalable products.
               </p>
             </div>
           </div>
@@ -200,10 +196,7 @@ const AboutNew = () => {
                 My Passion for Coding
               </p>
               <p className="grid-subtext">
-                Code is my playground, and I love building cool stuff with it.
-                It’s more than a job - it’s what that gets me excited every day.
-                I’m always exploring new tech and pushing my skills to the next
-                level!
+              Coding is where creativity meets logic for me. I love building things that solve real problems, from smart AI systems to beautifully engineered web apps. I'm constantly exploring new tools to push what's possible.
               </p>
             </div>
           </div>

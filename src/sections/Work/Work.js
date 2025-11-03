@@ -11,6 +11,7 @@ import {
   wist,
   vaultic,
   nestle,
+  allocatr,
   a_GD,
   b_GD,
   e_GD,
@@ -34,6 +35,7 @@ const Work = () => {
     Notezy,
     MathConf,
     nestle,
+    allocatr,
   };
 
   // Images for the combined Graphic Design section (merge former GD + MR)

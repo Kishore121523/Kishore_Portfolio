@@ -1,11 +1,21 @@
 export const devProjects = [
   {
     liveLink:
+      "https://allocatr-neon.vercel.app/dashboard",
+    github: "https://github.com/Kishore121523/Allocatr",
+    heading: "Allocatr",
+    desc: "AI-powered budget tracker with natural language expense entry and real-time analytics",
+    category: "WebDev",
+    image: "allocatr",
+    externalLink: true,
+  },
+  {
+    liveLink:
       "https://nestle-assistant-fnancbd7d7hzfxbm.canadacentral-01.azurewebsites.net/",
     github: "https://github.com/Kishore121523/nestle_bot",
     heading: "Nestle AI Chatbot",
     desc: "AI Chatbot with Hybrid RAG, Graph Reasoning, and Geolocation-based Product Search",
-    category: "Agentic RAG",
+    category: "WebDev",
     image: "nestle",
     externalLink: true,
   },
@@ -14,7 +24,7 @@ export const devProjects = [
     github: "https://github.com/Kishore121523/Wist",
     heading: "WIST",
     desc: "AI Enhanced Goal Planning System with Context Aware Suggestions",
-    category: "GenAI",
+    category: "WebDev",
     image: "wist",
     externalLink: true,
   },
@@ -122,6 +132,10 @@ export const skillsData = [
   {
     year: "2025",
     details: [
+      {
+        name: "Generative AI Engineer ",
+        provider: "Wadhwani Foundation",
+      },
       {
         name: "AI Developer (Freelance Contract)",
         provider: "AI RoundTable Inc.",
